@@ -6,15 +6,15 @@ function solution(N) {
   for (let i = 0; binaryNumber.length > i; i++) {
     if (initialNumber === "0") {
       initialNumber = binaryNumber[i];
+    } else if (binaryNumber[i] === "0") {
+      numberofOs = numberofOs + 1;
     } else if (binaryNumber[i] === "1") {
-      if ((numberofOs > binaryGap) & (numberofOs > 1)) {
+      if ((numberofOs > binaryGap) & (numberofOs >= 1)) {
         binaryGap = numberofOs;
       }
       numberofOs = 0;
-    } else if (binaryNumber[i] === "0") {
-      numberofOs = numberofOs + 1;
     }
   }
   return binaryGap;
 }
-solution(51712);
+console.log(solution(5));
