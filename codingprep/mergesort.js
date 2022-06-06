@@ -3,6 +3,7 @@
 function mergeArray(left, right){
 
     let sortedArr = [];
+    console.log(left, right, 'in the merge')
     while(left[0] && right[0]){
         if(left < right){
             sortedArr.push(left.shift());
@@ -25,6 +26,6 @@ function mergeSort(arr){
     return mergeArray(mergeSort(left), mergeSort(right));
 }
 
-console.log(mergeSort([1, 5,4 ,3]));
+//console.log(mergeSort([1, 5,4 ,3]));
 console.log( mergeSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92]));
 //console.log(mergeArray([3,6],[4,5]))
